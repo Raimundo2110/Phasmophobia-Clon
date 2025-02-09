@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color: black;
+    font-family: "Lexend";
+}
+
+.awards{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgb(0, 0, 0);
+    grid-area: awards;
+    padding-top: 40px;
+}
+.awards img{
+    width: 240px;
+}
+
+header{
+    height: 100px;
+    grid-area: header;
+}
+#menu{
+    display: none;
+}
+main{
+    height: 100vh;
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2045241760759733849/304A2319666CC46A90F030703F1D20CEE022B054/");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: main;
+    overflow: hidden;
+}
+section{
+    margin-top: 50px;
+    background-color: rgb(0, 0, 0);
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+}
+.section2{
+    height: 100%;
+    background-image: url(./assets/img/section2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    grid-area: section2;
+    display: flex;
+    position: relative;
+}
+.section2 p{
+    font-size: 25px;
+}
+.section2 h4{
+    font-weight: 300;
+}
+.comentary1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100px;
+}
+.comentary2{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 100px;
+    transform: translateY(-50%);
+}
+.comentary3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 100px;
+}
+footer{
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    grid-area: footer;
+    position: relative;
+    bottom: 0;
+}
+footer .social{
+    font-size: 35px;
+}
+.ft-contain{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    align-items: center;
+    font-weight: 200;
+}
+.ft1{
+    display: list-item;
+}
+.ft1 p{
+    margin-top: 20px;
+}
+.ft2 a{
+    border-bottom: 1px solid white;
+}
+.ft2 li{
+    margin-top: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20px;
+    font-size: 25px;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar img{
+    width: 300px;
+}
+
+.nav{
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.nav a:hover{
+    border-bottom: 2px solid white;
+}
+.nav .active{
+    color: rgb(236, 46, 36);
+    border-bottom: 2px solid rgb(229, 8, 8);
+}
+.nav .active:hover{
+    border-bottom: 2px solid rgb(229, 8, 8);
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+
+.hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero img{
+    width: 800px;
+}
+
+.hero p{
+    text-align: center;
+    font-size: 20px;
+    padding: 25px;
+    text-transform: uppercase;
+}
+
+.hero-app{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+}
+
+.hero-app li{
+    width: 150px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.prepare{
+    background-image: url("./assets/img/Menu.png");
+    width: 400px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.investigate{
+    background-image: url("./assets/img/Campsite+dots.png");
+    width: 400px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.play{
+    background-image: url("./assets/img/Asylum+EMF.png");
+    width: 400px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contain3{
+    background-color: rgba(0, 0, 0, 0.443);
+    margin: 0;
+    padding: 5px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 600px 1fr 250px auto;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "section section section"
+        "section2 section2 section2"
+        "awards awards awards"
+        "footer footer footer"
+    ;
+}
+
+@media (width < 1200px){
+    .nav{
+        display: none;
+    }
+    .social{
+        display: none;
+    }
+    #menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (width < 670px){
+    .hero img{
+        width: 470px;
+    }
+    .hero-app{
+        display: none;
+    }
+    .hero p{
+        display: none;
+    }
+    .container2{
+        display: list-item;
+        margin: 0 auto;
+    }
+    section{
+        display: list-item;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .container-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr auto 700px 400px auto;
+        grid-template-areas: 
+            "header header header"
+            "main main main"
+            "section section section"
+            "section2 section2 section2"
+            "awards awards awards"
+            "footer footer footer"
+        ;
+    }
+    .awards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 40px;
+    }
+    .awards img{
+        width: 140px;
+    }
+    .section2{
+        display: list-item;
+        justify-content: space-between;
+    }
+    .section2 p{
+        font-size: 20px;
+    }
+}
+
+
